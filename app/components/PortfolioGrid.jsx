@@ -16,11 +16,12 @@ const Portfolio = ({ project }) => {
       className={`bg-white px-5 py-6 md:p-8 rounded-xl grid ${project.bgColor ? (isPopsql ? 'lg:grid-cols-[1fr_460px] xl:grid-cols-[1fr_380px]' : '') : 'md:grid-cols-[1fr_300px]'} 2xl:grid-cols-1 gap-10 border border-[#ede8e2] items-center ${isPopsql ? 'lg:col-span-2 2xl:col-span-1' : ''}`}>
       <div>
         <div className="flex gap-4 items-center mb-6">
-          <Image
+          <img
             src={project.logo}
-            alt="popsql logo"
+            alt="logo"
             height={project.logoHeight || 20}
             width={project.logoWidth || 120}
+            loading="lazy"
           />
         </div>
 
@@ -36,13 +37,14 @@ const Portfolio = ({ project }) => {
         <div>
           <div className="grid grid-cols-2 gap-3 max-w-lg">
             {project.images.map((img, index) => (
-              <Image
+              <img
                 key={index}
                 className="border rounded-lg"
                 src={img}
-                alt="popsql thumbnail 1"
+                alt={'thumbnail ' + index}
                 height="100"
                 width="250"
+                loading="lazy"
               />
             ))}
           </div>
@@ -51,12 +53,13 @@ const Portfolio = ({ project }) => {
 
       {project.image && (
         <div className="max-w-lg">
-          <Image
+          <img
             className="rounded-lg"
             src={project.image}
-            alt="popsql thumbnail 1"
+            alt="thumbnail"
             height="120"
             width="500"
+            loading="lazy"
           />
         </div>
       )}
