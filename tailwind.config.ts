@@ -16,6 +16,7 @@ const config: Config = {
       screens: {
         'height-920': { raw: '(min-height: 920px)' },
         '3xl': '1900px',
+        '4xl': '2400px',
       },
     },
   },

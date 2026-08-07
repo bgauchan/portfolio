@@ -9,22 +9,23 @@ interface PortfolioProps {
 
 const Portfolio = ({ project }: PortfolioProps) => {
   const isPopsql = project.logo === '/popsql-white.svg';
+  const isDescript = project.logo === '/descript-logo.svg';
 
   return (
     <li
       style={{
-        background: project.bgColor,
+        background: isDescript ? undefined : project.bgColor,
         color: project.bgColor ? 'white' : undefined,
         boxShadow: '0 20px 40px 0 rgba(0, 0, 0, 0.05)',
       }}
       className={`bg-white px-5 py-6 md:p-8 rounded-xl grid ${
         project.bgColor
           ? isPopsql
-            ? 'lg:grid-cols-[1fr_460px] xl:grid-cols-[1fr_380px]'
-            : ''
+            ? 'md:grid-cols-[1fr_300px] lg:grid-cols-[1fr_460px] xl:grid-cols-[1fr_380px]'
+            : 'md:grid-cols-[1fr_300px]'
           : 'md:grid-cols-[1fr_300px]'
       } 2xl:grid-cols-1 gap-10 border border-[#ede8e2] items-center ${
-        isPopsql ? 'lg:col-span-2 2xl:col-span-1' : ''
+        isDescript ? 'bg-[radial-gradient(180%_180%_at_20%_0%,#651a39_0%,#822041_75%)]' : ''
       }`}
     >
       <div>
@@ -96,7 +97,7 @@ const PortfolioGrid = () => {
       <Heading type="h2">Work</Heading>
       <div>
         <Heading>Design Engineer</Heading>
-        <ul className="mt-6 grid gap-3 lg:grid-cols-2 2xl:grid-cols-3">
+        <ul className="mt-6 grid gap-3 2xl:grid-cols-2 4xl:grid-cols-4">
           {projects.marketing.map((proj) => (
             <Portfolio key={proj.id} project={proj} />
           ))}

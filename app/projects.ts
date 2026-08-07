@@ -3,6 +3,15 @@ import { Projects } from './types/project';
 const projects: Projects = {
   marketing: [
     {
+      id: 4,
+      logo: '/descript-logo.svg',
+      desc: `I led the migration of Descript's marketing website from Webflow to Next.js, Builder.io, and Vercel, architecting the content workflows, integrations, and deployment systems. I built AI workflows and Claude Skills to automate performance analysis and content extraction, and drove a programmatic SEO initiative that produced 400–800 tutorial pages.`,
+      ctaText: 'Visit Descript website',
+      ctaUrl: 'https://descript.com/',
+      bgColor: 'radial-gradient(180% 180% at 20% 0%,#651a39 0%,#822041 75%)',
+      image: '/descript-thumbnail.png'
+    },
+    {
       id: 1,
       logo: '/popsql-white.svg',
       desc: `I focused on building interactive landing pages, integrated Contentful as a headless CMS, and optimized content migration. I improved Core Vitals through SSG, ISR, and caching on NextJS. Additionally, I contributed to SEO enhancements, addressing header hierarchies, alt image descriptions, and meta attributes for blog posts.`,
