@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -13,10 +14,12 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       screens: {
-        'height-920': {'raw': '(min-height: 920px)'},
-        '3xl': '1900px'
-      }
-    }
+        'height-920': { raw: '(min-height: 920px)' },
+        '3xl': '1900px',
+      },
+    },
   },
   plugins: [],
-}
+};
+
+export default config;

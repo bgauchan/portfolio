@@ -1,34 +1,60 @@
+import Image from 'next/image';
+import Heading from './Heading';
+import projects from '../projects';
+import { Project } from '../types/project';
 
-import Heading from "./Heading";
-import Image from "next/image";
-import projects from "../projects";
+interface PortfolioProps {
+  project: Project;
+}
 
-const Portfolio = ({ project }) => {
+const Portfolio = ({ project }: PortfolioProps) => {
   const isPopsql = project.logo === '/popsql-white.svg';
 
   return (
     <li
-      style={{ 
+      style={{
         background: project.bgColor,
-        color: project.bgColor && 'white',
-        boxShadow: '0 20px 40px 0 rgba(0, 0, 0, 0.05)'
+        color: project.bgColor ? 'white' : undefined,
+        boxShadow: '0 20px 40px 0 rgba(0, 0, 0, 0.05)',
       }}
-      className={`bg-white px-5 py-6 md:p-8 rounded-xl grid ${project.bgColor ? (isPopsql ? 'lg:grid-cols-[1fr_460px] xl:grid-cols-[1fr_380px]' : '') : 'md:grid-cols-[1fr_300px]'} 2xl:grid-cols-1 gap-10 border border-[#ede8e2] items-center ${isPopsql ? 'lg:col-span-2 2xl:col-span-1' : ''}`}>
+      className={`bg-white px-5 py-6 md:p-8 rounded-xl grid ${
+        project.bgColor
+          ? isPopsql
+            ? 'lg:grid-cols-[1fr_460px] xl:grid-cols-[1fr_380px]'
+            : ''
+          : 'md:grid-cols-[1fr_300px]'
+      } 2xl:grid-cols-1 gap-10 border border-[#ede8e2] items-center ${
+        isPopsql ? 'lg:col-span-2 2xl:col-span-1' : ''
+      }`}
+    >
       <div>
         <div className="flex gap-4 items-center mb-6">
           <Image
             src={project.logo}
-            alt="popsql logo"
-            height={project.logoHeight || 20}
-            width={project.logoWidth || 120}
+            alt={`${project.ctaText} logo`}
+            height={project.logoHeight ?? 20}
+            width={project.logoWidth ?? 120}
           />
         </div>
 
-        <p className={`mb-6`}>{project.desc}</p>
+        <p className="mb-6">{project.desc}</p>
 
-        <a className={`${project.bgColor ? 'text-white' : 'text-black'} border py-2 px-4 rounded-md text-sm font-medium inline-flex gap-2 hover:bg-black hover:border-black hover:text-white`} href={project.ctaUrl} target="_blank">
+        <a
+          className={`${
+            project.bgColor ? 'text-white' : 'text-black'
+          } border py-2 px-4 rounded-md text-sm font-medium inline-flex gap-2 hover:bg-black hover:border-black hover:text-white`}
+          href={project.ctaUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
           {project.ctaText}
-          <Image className="transform rotate-90" src={`/open_link_arrow${project.bgColor ? '_white' : ''}.svg`} alt="arrow link icon" height="10" width="8" />
+          <Image
+            className="transform rotate-90"
+            src={`/open_link_arrow${project.bgColor ? '_white' : ''}.svg`}
+            alt="arrow link icon"
+            height={10}
+            width={8}
+          />
         </a>
       </div>
 
@@ -40,9 +66,9 @@ const Portfolio = ({ project }) => {
                 key={index}
                 className="border rounded-lg"
                 src={img}
-                alt={'thumbnail ' + index}
-                height="100"
-                width="250"
+                alt={`thumbnail ${index}`}
+                height={100}
+                width={250}
               />
             ))}
           </div>
@@ -55,14 +81,14 @@ const Portfolio = ({ project }) => {
             className="rounded-lg"
             src={project.image}
             alt=""
-            height="120"
-            width="500"
+            height={120}
+            width={500}
           />
         </div>
       )}
     </li>
-  )
-}
+  );
+};
 
 const PortfolioGrid = () => {
   return (
@@ -78,7 +104,6 @@ const PortfolioGrid = () => {
       </div>
       <div className="mt-2">
         <Heading>Product Designer</Heading>
-
         <ul className="mt-6 grid gap-4 2xl:grid-cols-2">
           {projects.design.map((proj) => (
             <Portfolio key={proj.id} project={proj} />
@@ -87,7 +112,6 @@ const PortfolioGrid = () => {
       </div>
       <div className="mt-2">
         <Heading>UX Engineer</Heading>
-
         <ul className="mt-6 grid gap-3 2xl:grid-cols-2">
           {projects.eng.map((proj) => (
             <Portfolio key={proj.id} project={proj} />
@@ -95,7 +119,7 @@ const PortfolioGrid = () => {
         </ul>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default PortfolioGrid;

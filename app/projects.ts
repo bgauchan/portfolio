@@ -1,4 +1,6 @@
-const projects = {
+import { Projects } from './types/project';
+
+const projects: Projects = {
   marketing: [
     {
       id: 1,

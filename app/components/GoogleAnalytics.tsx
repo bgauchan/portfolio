@@ -1,11 +1,12 @@
-import Script from "next/script";
+import Script from 'next/script';
 
-const GoogleAnalytics = ({ ga_id }) => (
+interface GoogleAnalyticsProps {
+  ga_id: string;
+}
+
+const GoogleAnalytics = ({ ga_id }: GoogleAnalyticsProps) => (
   <>
-    <Script
-      async
-      src={`https://www.googletagmanager.com/gtag/js?id=${ga_id}`}
-    ></Script>
+    <Script async src={`https://www.googletagmanager.com/gtag/js?id=${ga_id}`} />
     <Script
       id="google-analytics"
       dangerouslySetInnerHTML={{
@@ -17,7 +18,7 @@ const GoogleAnalytics = ({ ga_id }) => (
           gtag('config', '${ga_id}');
         `,
       }}
-    ></Script>
+    />
   </>
 );
 
