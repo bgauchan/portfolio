@@ -57,3 +57,9 @@ Before adding or editing any UI, read [`DESIGN_SYSTEM.md`](./DESIGN_SYSTEM.md) a
 - `npm run build` — production build
 - `npm run start` — serve the production build
 - `npm run lint` — Next.js lint
+
+## Git conventions
+
+- Commit with a **descriptive body** — never a bare one-line message. The body should summarize what changed and why (a "history" of the change).
+- Include the **AI model name** that generated the change in the commit message (e.g. `Generated with opencode/big-pickle`).
+- Before committing, review `git status`, `git diff`, and `git log --oneline -10`.
