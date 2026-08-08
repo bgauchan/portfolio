@@ -9,7 +9,7 @@ const projects: Projects = {
       ctaText: 'Visit Descript website',
       ctaUrl: 'https://descript.com/',
       bgColor: 'radial-gradient(180% 180% at 20% 0%,#651a39 0%,#822041 75%)',
-      image: '/descript-thumbnail.png'
+      image: '/descript-thumbnail.webp'
     },
     {
       id: 1,
@@ -18,7 +18,7 @@ const projects: Projects = {
       ctaText: 'Visit PopSQL website',
       ctaUrl: 'https://popsql.com/',
       bgColor: 'linear-gradient(0deg,#f98653,#ff2c6b)',
-      image: '/popsql-thumbnail.png'
+      image: '/popsql-thumbnail.webp'
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const projects: Projects = {
       ctaText: 'Visit CircleCI website',
       ctaUrl: 'https://circleci.com/',
       bgColor: 'radial-gradient(181.1% 161.28% at 118.08% 164.21%,#66edff 15.1%,#01cbf7 48.18%,#7149e9 100%),radial-gradient(758.54% 128.61% at 0 1.52%,#0db66f 0,#73b7f6 100%)',
-      image: '/circleci-thumbnail.png'
+      image: '/circleci-thumbnail.webp'
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const projects: Projects = {
       ctaText: 'Visit Labelbox website',
       ctaUrl: 'https://labelbox.com/',
       bgColor: 'radial-gradient(226.64% 1035.02% at 1.92% -.04%,#22262a 0,rgba(34,38,42,.42) 100%)',
-      image: '/labelbox-thumbnail.png'
+      image: '/labelbox-thumbnail.webp'
     }
   ],
   design: [
@@ -48,10 +48,10 @@ const projects: Projects = {
       ctaText: 'Read more',
       ctaUrl: 'https://iisbardan.notion.site/Pinch-67918f657eba4cd78cbb41a958dff1e5',
       images: [
-        '/pinch-5.png',
-        '/pinch-2.jpg',
-        '/pinch-4.png',
-        '/pinch-3.png',
+        '/pinch-5.webp',
+        '/pinch-2.webp',
+        '/pinch-4.webp',
+        '/pinch-3.webp',
       ]
     },
     {
@@ -62,10 +62,10 @@ const projects: Projects = {
       ctaText: 'Read more',
       ctaUrl: 'https://iisbardan.notion.site/HyperLiked-49a1be910a724c9f84815004011b149c',
       images: [
-        '/hyperliked-1.png',
-        '/hyperliked-3.png',
-        '/hyperliked-4.png',
-        '/hyperliked-2.png',
+        '/hyperliked-1.webp',
+        '/hyperliked-3.webp',
+        '/hyperliked-4.webp',
+        '/hyperliked-2.webp',
       ]
     },
     {
@@ -76,10 +76,10 @@ const projects: Projects = {
       ctaText: 'Read more',
       ctaUrl: 'https://iisbardan.notion.site/Trumpet-2bdee1b7d2614aaab3c648e49a86b91c',
       images: [
-        '/trumpet-2.png',
-        '/trumpet-1.png',
-        '/trumpet-4.png',
-        '/trumpet-3.png',
+        '/trumpet-2.webp',
+        '/trumpet-1.webp',
+        '/trumpet-4.webp',
+        '/trumpet-3.webp',
       ]
     },
     {
@@ -90,22 +90,22 @@ const projects: Projects = {
       ctaText: 'Read more',
       ctaUrl: 'https://iisbardan.notion.site/Taylr-Confero-6ccf4dd9a40048fd952bf96a32637b83',
       images: [
-        '/taylr-1.png',
-        '/taylr-2.png',
-        '/taylr-4.jpeg',
-        '/taylr-3.jpeg',
+        '/taylr-1.webp',
+        '/taylr-2.webp',
+        '/taylr-4.webp',
+        '/taylr-3.webp',
       ]
     }
   ],
   eng: [
     {
       id: 1,
-      logo: '/pixlee.png',
+      logo: '/pixlee.webp',
       logoWidth: 130,
       desc: `I collaborated with the design team to create Pixlee's Design System. I also helped structure the Design-to-Engineering process, and often contributed to building the UI of Pixlee's web app.`,
       ctaText: 'Read more',
       ctaUrl: 'https://iisbardan.notion.site/Pixlee-ba73e038895844f78a85a24d39cc9448',
-      image: '/pixlee-1.png'
+      image: '/pixlee-1.webp'
     },
     {
       id: 2,
@@ -114,7 +114,7 @@ const projects: Projects = {
       desc: `Featurepoints allows users to earn rewards on their phone or the web through cashback, contests, surveys, and more. I helped build the front end (UI) and as well as a small component library.`,
       ctaText: 'Read more',
       ctaUrl: 'https://iisbardan.notion.site/FeaturePoints-99432b079e3a476cbbea4dc5c7cd9465',
-      image: '/featurepoints-1.png'
+      image: '/featurepoints-1.webp'
     }
   ]
 };
