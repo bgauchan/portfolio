@@ -11,7 +11,7 @@ const Sidebar = () => {
           alt="character illustration"
           height={60}
           width={110}
-          className="rotate-180 transition hover:-translate-y-5"
+          className="rotate-180"
         />
       </div>
 
@@ -21,7 +21,7 @@ const Sidebar = () => {
         </Heading>
 
         <p className="mt-6 md:mt-12 text-lg lg:text-[1.07rem] leading-7">
-          I&apos;m currently residing in Calgary, Canada and currently work remotely as a
+          I&apos;m currently residing in Calgary, Canada and last worked as a
           Webmaster at{' '}
           <a
             href="https://descript.com/"
