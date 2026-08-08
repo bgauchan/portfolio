@@ -16,7 +16,7 @@ const projects: Projects = {
       logo: '/popsql-white.svg',
       desc: `I focused on building interactive landing pages, integrated Contentful as a headless CMS, and optimized content migration. I improved Core Vitals through SSG, ISR, and caching on NextJS. Additionally, I contributed to SEO enhancements, addressing header hierarchies, alt image descriptions, and meta attributes for blog posts.`,
       ctaText: 'Visit PopSQL website',
-      ctaUrl: 'https:///popsql.com/',
+      ctaUrl: 'https://popsql.com/',
       bgColor: 'linear-gradient(0deg,#f98653,#ff2c6b)',
       image: '/popsql-thumbnail.png'
     },

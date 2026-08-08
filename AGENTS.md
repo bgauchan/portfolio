@@ -10,7 +10,7 @@ A personal portfolio website for **Bardan Gauchan** (Design Engineer / UX Design
 - **Language**: TypeScript (converted from JS in the latest commit)
 - **Styling**: Tailwind CSS
 - **Fonts**: `next/font/google` — Inter (body) + Caprasimo (headings)
-- **Deployment**: Static site hosted on GitHub Pages (previously built with `next export` into an `out/` folder)
+- **Deployment**: Hosted on Vercel (standard `next build`)
 
 ## Architecture
 
@@ -44,9 +44,8 @@ Card grid columns are responsive: single column by default, `2xl:grid-cols-2`, a
 
 ## Known issues / gotchas
 
-- `app/page.tsx` sets the background via the dynamic class `` `bg-[${bgColors.beige}]` `` — Tailwind cannot see this class at build time, so the beige background likely won't apply. Fix by using an inline style or a static class like `bg-[#F9F7F4]`.
-- The PopSQL CTA URL is malformed: `https:///popsql.com/`.
-- Custom fonts loaded via `next/font` only work at build time; confirm they are self-hosted/subsetted for static export.
+- `app/page.tsx` uses a static `bg-[#F9F7F4]` class for the beige background. If you change the color, use a static class or inline style — dynamic template-literal classes like `` `bg-[${color}]` `` are invisible to Tailwind at build time and won't be generated.
+- Custom fonts loaded via `next/font` are self-hosted/subsetted at build time.
 
 ## Design system
 

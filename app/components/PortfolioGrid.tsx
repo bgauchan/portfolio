@@ -81,7 +81,7 @@ const Portfolio = ({ project }: PortfolioProps) => {
           <Image
             className="rounded-lg"
             src={project.image}
-            alt=""
+            alt={`${project.ctaText} preview`}
             height={120}
             width={500}
           />

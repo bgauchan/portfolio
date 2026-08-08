@@ -7,7 +7,7 @@ interface ButtonProps {
 }
 
 const Button = ({ type, link, children }: ButtonProps) => {
-  const commonClass = 'font-medium text-center rounded-[50px] py-3 text-sm md:text-md';
+  const commonClass = 'font-medium text-center rounded-[50px] py-3 text-sm md:text-base';
 
   if (type === 'primary') {
     return (
