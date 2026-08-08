@@ -20,6 +20,7 @@ const Button = ({ type, link, children }: ButtonProps) => {
   return (
     <a
       href={link}
+      target="_blank"
       className={`text-black hover:bg-black hover:text-white border border-black ${commonClass}`}
     >
       {children}

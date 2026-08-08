@@ -21,19 +21,19 @@ const Sidebar = () => {
         </Heading>
 
         <p className="mt-6 md:mt-12 text-lg lg:text-[1.07rem] leading-7">
-          I&apos;m currently residing in Calgary, Canada and last worked remotely as a Design
-          Engineer at{' '}
+          I&apos;m currently residing in Calgary, Canada and currently work remotely as a
+          Webmaster at{' '}
           <a
-            href="https://popsql.com/"
+            href="https://descript.com/"
             target="_blank"
             className="text-black font-medium hover:underline"
           >
-            PopSQL
+            Descript
           </a>
           .
           <br />
           <br />
-          In the past, I have worked in roles such as UX Designer and UX/Design Engineer. My true
+          In the past, I have worked in roles such as Product Designer and UX Engineer. My true
           passion lies in creating and bringing designs to life through code.
         </p>
 
@@ -69,7 +69,7 @@ const Sidebar = () => {
         </div>
 
         <div className="mt-12 md:mt-12 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
-          <Button link="https://www.dropbox.com/scl/fi/qu5chw06larmgk8mpbuiz/Resume.pdf?rlkey=mj29ggijrr45nvjuppzj71b33&dl=0">
+          <Button link="/resume.pdf">
             View my Resume
           </Button>
           <Button link="mailto:bardan.gauchan@gmail.com" type="primary">

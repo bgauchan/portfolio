@@ -30,7 +30,7 @@ Combines strong technical implementation skills with a business-oriented mindset
 
 ## Recent Experience
 
-### Descript, Remote — Lead Web Engineer
+### Descript, Remote — Webmaster
 **Feb 2024 - Current**
 
 - Led the end-to-end migration of the marketing website from Webflow to Next.js, Builder.io, and Vercel, designing the underlying architecture, content workflows, integrations, and deployment systems.
