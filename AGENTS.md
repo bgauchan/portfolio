@@ -27,6 +27,7 @@ Everything is static — there is no backend, CMS, or database. All content live
 | `app/components/Heading.tsx` | h1/h2/h3 wrappers using the Caprasimo font |
 | `app/components/Button.tsx` | Primary (filled black) and secondary (outlined) button styles |
 | `app/components/GoogleAnalytics.tsx` | GA4 script injected into the layout |
+| `resume.md` | Resume content used as the source of truth for role descriptions when adding/updating work cards |
 
 ## How project cards work
 
@@ -34,8 +35,12 @@ A project entry in `app/projects.ts` may include:
 - `logo`, `logoWidth`, `logoHeight` — brand logo rendered from `public/`
 - `desc` — short description
 - `ctaText` / `ctaUrl` — external link (portfolio sites or Notion case studies)
-- `bgColor` — background gradient; when present, the card text renders white and the card gets a wide two-column layout (the PopSQL card is special-cased as `isPopsql` in `PortfolioGrid.tsx`)
+- `bgColor` — background gradient; when present, the card text renders white (the Descript card is special-cased as `isDescript` in `PortfolioGrid.tsx`, which applies the gradient via a Tailwind arbitrary-value class instead of the inline `style`; the PopSQL card is special-cased as `isPopsql` for wider `lg`/`xl` image columns)
 - `image` — single wide thumbnail, OR `images[]` — 2x2 grid of thumbnails (used by the design category)
+
+Card grid columns are responsive: single column by default, `2xl:grid-cols-2`, and `4xl:grid-cols-4` (Design Engineer row). All cards use the Product Designer layout (`md:grid-cols-[1fr_300px]`, `2xl:grid-cols-1`), so the image sits beside the text until the row becomes multi-column.
+
+`tailwind.config.ts` adds custom screens: `height-920` (raw height query), `3xl` (1900px), and `4xl` (2400px). Note: because `screens` contains an object entry (`height-920`), arbitrary `min-[...]`/`max-[...]` variants are unsupported — use named breakpoints instead.
 
 ## Known issues / gotchas
 
