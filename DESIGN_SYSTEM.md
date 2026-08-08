@@ -65,11 +65,21 @@ Loaded via `next/font/google` (self-hosted at build time).
 - 430px fixed column on xl (`xl:grid-cols-[430px_1fr]` in `app/page.tsx`).
 - Contains: hero illustration, h1 heading, bio (`body-lg`), social icon links (LinkedIn/GitHub/Dribbble/CodePen, `hover:scale-125`), primary + secondary buttons.
 
-### Portfolio card (`app/components/PortfolioGrid.tsx`)
+### Portfolio card (`app/components/PortfolioCard.tsx`)
 - `bg-white` (or `bgColor` gradient) `rounded-xl`, border `color-border`, `shadow-card`.
 - Grid: `md:grid-cols-[1fr_300px]` (text | media) for most cards; cards with `bgColor` are full-width two-column; PopSQL special-cased (`isPopsql`) as a wider 2-col-span card.
 - Logo + description (`color-text`) + CTA link (`label` style, arrow icon that flips white on gradient cards).
 - Media: `image` (single wide) or `images[]` (2x2 grid of thumbnails).
+
+### Project section (`app/components/ProjectSection.tsx`)
+- Reusable role section: `<h3>` role heading (via `Heading`) + responsive card grid.
+- Grid: single column by default, `2xl:grid-cols-2` at 1900px+, `4xl:grid-cols-4` at 2400px+; `gap-3`, `mt-6`.
+- Props: `title` (string, role heading text) and `projects` (array of `Project`).
+- Used by `PortfolioGrid` for all three roles — keeps every section on the same layout.
+
+### Portfolio grid (`app/components/PortfolioGrid.tsx`)
+- Full `Work` section: `h2` heading + one `ProjectSection` per role (`Design Engineer`, `Product Designer`, `UX Engineer`).
+- Section wrapper: `px-6 md:px-12 py-10`, `flex flex-col gap-10`.
 
 ## Layout tokens
 
